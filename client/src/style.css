@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .app {
+    @apply w-full;
+  }
+  .app__container {
+    @apply w-[1200px] mx-auto;
+  }
+  .btn {
+    @apply py-2 px-4 rounded-lg font-semibold;
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-white shadow-md hover:bg-orange-400;
+  }
+  .btn-secondary {
+    @apply bg-transparent border-blue-500 border-2 hover:bg-orange-400 hover:text-white hover:border-none;
+  }
+  .btn-cancel {
+    @apply bg-rose-500 text-white hover:bg-rose-600/75;
+  }
+  .btn-save {
+    @apply bg-yellow-500 text-white hover:bg-yellow-600/75;
+  }
+  .btn-add {
+    @apply bg-green-500 text-white hover:bg-green-600/75;
+  }
+  .btn-full {
+    @apply w-full;
+  }
+  .navbar__item {
+    @apply text-black;
+  }
+  .navbar__profile {
+    @apply rounded-lg flex items-center gap-2 p-1 ease-out duration-300 hover:bg-gray-500/25;
+  }
+  .navbar__auth {
+    @apply text-black font-primary text-base;
+  }
+  .navbar__avatar {
+    @apply w-[28px] h-[28px] rounded-full overflow-hidden;
+  }
+  .posts {
+    @apply w-full mx-auto mb-[90px];
+  }
+  .posts__intro {
+    @apply mt-20 flex items-end justify-between;
+  }
+  .posts__heading {
+    @apply w-2/3;
+  }
+  .posts__search {
+    @apply w-1/3;
+  }
+  .posts__title {
+    @apply text-5xl font-bold font-primary;
+  }
+  .posts__subtitle {
+    @apply mt-5 block font-primary font-semibold text-lg text-neutral-400;
+  }
+  .cards {
+    @apply mt-16 grid grid-cols-4 gap-x-6 gap-y-16;
+  }
+  .card {
+    @apply bg-gray-500/50 rounded-lg overflow-hidden ease-out duration-300 hover:bg-gray-500/75;
+  }
+  .card__img {
+    @apply w-full h-40 min-h-fit overflow-hidden cursor-pointer;
+  }
+  .card__img img {
+    @apply bg-cover w-full h-full;
+  }
+  .card__body {
+    @apply m-4 truncate text-base;
+  }
+  .card__title {
+    @apply my-4 text-xl font-card-title truncate;
+  }
+  .card__sub {
+    @apply text-sm font-primary truncate;
+  }
+  .card__author {
+    @apply flex items-center my-4 ml-4 gap-5;
+  }
+  .card__author-name {
+    @apply text-neutral-600 font-primary font-semibold text-xs
+    relative;
+  }
+  .card__author-name::after {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 1px;
+    background: #70777f;
+    right: -12px;
+    top: 0;
+  }
+  .card__avatar {
+    @apply rounded-full w-11 h-11 overflow-hidden;
+  }
+  .card__datetime {
+    @apply text-neutral-600 font-primary font-semibold text-xs;
+  }
+  .card__controls {
+    @apply ml-4 my-3;
+  }
+  .card-control__item {
+    @apply mr-4 px-3 py-2 rounded-full cursor-pointer text-sm font-link text-white;
+  }
+  .card-control__item-edit {
+    @apply bg-yellow-400;
+  }
+  .card-control__item-remove {
+    @apply bg-rose-400;
+  }
+  .card__status {
+    @apply text-xl flex items-center gap-5;
+  }
+  .card__status-fav.active {
+    @apply text-rose-500;
+  }
+  .card__status-fav {
+    @apply cursor-pointer text-white;
+  }
+  .card__view {
+    @apply text-right;
+  }
+  /* FormAuth */
+  .auth__signup,
+  .auth__signin {
+    @apply flex items-center justify-center flex-col gap-2;
+  }
+  .auth__heading {
+    @apply text-5xl font-primary font-bold;
+  }
+  .auth__sub {
+    @apply text-sm text-neutral-400 font-primary;
+  }
+  .form__auth {
+    @apply w-2/5 bg-blue-400/50 mt-8 mx-auto p-8 rounded-lg;
+  }
+  .form__group {
+    @apply mt-4;
+  }
+  .form__label {
+    @apply text-base font-primary block text-white mb-2;
+  }
+  .form__input {
+    @apply px-4 py-2 rounded-lg block w-full mb-4;
+  }
+  .form__img-old {
+    @apply w-64;
+  }
+  .form__control {
+    @apply flex gap-2 items-center;
+  }
+  .form__desc {
+    @apply flex justify-center mt-4;
+  }
+  .form__transition {
+    @apply text-orange-500 cursor-pointer;
+  }
+  .form__post .form__label {
+    @apply text-black;
+  }
+  .form__post .form__input {
+    @apply border-blue-500 border-[1px];
+  }
+  .form__select {
+    @apply flex justify-between;
+  }
+  /* Page details */
+  .post {
+    @apply mt-32;
+  }
+  .post__heading {
+    @apply text-3xl font-primary w-8/12 text-left mx-auto leading-loose;
+  }
+  .post__author {
+    @apply flex gap-5 items-center w-8/12 text-left mx-auto;
+  }
+  .post__author-avatar {
+    @apply w-12 h-12;
+  }
+  .post__author-name {
+    @apply relative text-neutral-400 font-primary font-semibold text-sm;
+  }
+  .post__author-name::after {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    background: #ccc;
+    right: -12px;
+    top: 0;
+  }
+  .post__author-timedate {
+    @apply text-neutral-400 font-primary font-semibold text-sm;
+  }
+  .post__image {
+    @apply my-12 w-1/2 mx-auto;
+  }
+  .post__body {
+    @apply text-base w-8/12 mx-auto text-left font-primary leading-normal;
+  }
+  /* Component search */
+  .search {
+    @apply w-full flex items-center justify-between rounded-lg overflow-hidden bg-gray-200 relative;
+  }
+  .search__input {
+    @apply w-4/5 py-2 px-3 bg-gray-200 outline-none;
+  }
+  .search__clear {
+    @apply absolute right-12 mr-1 top-1 text-orange-500 text-2xl;
+  }
+  .search__icon {
+    @apply py-2 px-3 bg-gray-500 cursor-pointer text-white font-bold;
+  }
+  .search__clear {
+    @apply cursor-pointer;
+  }
+  /* component filter */
+  .posts__filter {
+    @apply w-full;
+  }
+  .filter {
+    @apply mt-8 flex items-center gap-2;
+  }
+  .filter__item {
+    @apply text-base font-bold btn btn-secondary cursor-pointer ease-in duration-300;
+  }
+  .filter__item.active {
+    @apply bg-orange-400 text-white border-none;
+  }
+}
